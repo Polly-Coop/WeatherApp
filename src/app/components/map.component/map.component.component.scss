@@ -1,0 +1,68 @@
+input[type=range]::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    background-color: var(--primary-color);
+}
+
+.weather-map {
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+      position: relative;
+      padding-bottom: 10px;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+    }
+  
+    .map-container {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      height: 500px;
+  
+      .map-controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        .map-btn {
+          background-color: var(--background-color);
+          border: none;
+          border-radius: 30px;
+          padding: 10px 15px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-weight: 500;
+          cursor: pointer;
+          box-shadow: var(--box-shadow);
+          transition: all 0.3s;
+  
+          &:hover {
+            background-color: var(--primary-color);
+          }
+  
+          i {
+            font-size: 1.2rem;
+          }
+        }
+      }
+  
+      .btn-controls {
+        top: 100px;
+      }
+    }
+  }

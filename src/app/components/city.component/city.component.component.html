@@ -1,0 +1,6 @@
+
+<div class="location-selector">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" placeholder="Введите город..." class="search-input" name="city" [(ngModel)]="cityName">
+    </form>
+  </div>

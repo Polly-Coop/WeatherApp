@@ -1,0 +1,17 @@
+<section class="forecast-10days">
+    <h2 class="section-title">Прогноз на {{cntDay}} дней</h2>
+    <div class="forecast-container">
+      <div class="forecast-day" *ngFor="let item of weatherDataSixDay?.list | slice:0:cntDay; let i = index">
+        <div class="day-name">{{forecast[i]}}</div>
+        <div class="day-icon" [ngStyle]="{'background-image': this.getUrl(i)}"></div>
+        <div class="day-temp">
+          <span class="max-temp">{{weatherDataSixDay!.list[i].main.temp_max| number: '1.0-0'}}°</span>
+          <span class="min-temp">{{weatherDataSixDay!.list[i].main.temp_min| number: '1.0-0'}}°</span>
+        </div>
+        <div class="day-precipitation">
+          <i class="material-icons">umbrella</i>
+          <span>{{weatherDataSixDay!.list[i].main.humidity}}%</span>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,36 @@
+<section class="weather-map">
+
+  <h2 class="section-title">Карта погоды</h2>
+
+  <div class="map-container">
+
+    <!-- Сама карта -->
+    <div #mapContainer class="map-container"></div>
+    <div class="map-controls">
+      <button class="map-btn" (click)="toggleWeatherLayer()">Переключение погодного слоя</button>
+      <input class="map-switch" type="range" min="0" max="1" step="0.1" [(ngModel)]="weatherOpacity"
+        (input)="updateWeatherOpacity()">
+    </div>
+
+    <!-- Кнопки -->
+    <div class="map-controls btn-controls">
+      <button class="map-btn" (click)="changeMapLayer('temp_new')">
+        <i class="material-icons">thermostat</i> Температура
+      </button>
+      <button class="map-btn" (click)="changeMapLayer('precipitation_new')">
+        <i class="material-icons">umbrella</i> Осадки
+      </button>
+      <button class="map-btn" (click)="changeMapLayer('wind_new')">
+        <i class="material-icons">air</i> Ветер
+      </button>
+      <button class="map-btn" (click)="changeMapLayer('clouds_new')">
+        <i class="material-icons">cloud</i> Облака
+      </button>
+      <button class="map-btn" (click)="changeMapLayer('pressure_new')">
+        <i class="material-icons">speed</i> Давление на уровне моря
+      </button>
+    </div>
+
+  </div>
+
+</section>

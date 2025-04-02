@@ -1,0 +1,90 @@
+.forecast-10days {
+    margin-bottom: 30px;
+  
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+      position: relative;
+      padding-bottom: 10px;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+    }
+  
+    .forecast-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 15px;
+  
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 3px;
+        cursor: pointer;
+      }
+  
+      .forecast-day {
+        min-width: 120px;
+        background-color: var(--light-gray);
+        border-radius: var(--border-radius);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+  
+        .day-name {
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+  
+        .day-icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+  
+        .day-temp {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 10px;
+  
+          .max-temp {
+            font-weight: 600;
+            color: var(--secondary-color);
+          }
+  
+          .min-temp {
+            color: #666;
+          }
+        }
+  
+        .day-precipitation {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 0.9rem;
+  
+          i {
+            font-size: 1rem;
+            color: #4682B4;
+          }
+        }
+      }
+    }
+  }
